@@ -107,4 +107,19 @@ public class AppTest
     	boolean result = userRegistration.check_Password2("annieR3uth");
     	Assert.assertEquals(true, result);
     }
+    @Test
+    public void whenExactlyOneSpecialCharacter_shouldReturnTrue() {
+    	boolean result = userRegistration.check_Password3("annieR3uth@");
+    	Assert.assertEquals(true, result);
+    }
+    @Test
+    public void whenNoSpecialCharacter_shouldReturnFalse() {
+    	boolean result = userRegistration.check_Password3("annieR3uthhh");
+    	Assert.assertEquals(false, result);
+    }
+    @Test
+    public void whenMoreThanOneSpecialCharacter_shouldReturnFalse() {
+    	boolean result = userRegistration.check_Password3("annieR3uth@#$");
+    	Assert.assertEquals(false, result);
+    }
 }

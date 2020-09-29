@@ -83,4 +83,15 @@ public class UserRegistration {
 		else 
 		    return false;
 	}
+
+
+	public boolean check_Password3(String password3) {
+		String pattern = "^(?=.*?[0-9])(?=.*?[A-Z])[0-9a-zA-Z]*[@#$%][0-9a-zA-Z]*${8,}";
+		Pattern r = Pattern.compile(pattern);
+		Matcher m = r.matcher(password3);
+		if (m.find())
+		  	return true;
+		else 
+		    return false;
+	}
 }
