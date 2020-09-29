@@ -62,4 +62,15 @@ public class UserRegistration {
 		else 
 		    return false;
 	}
+
+
+	public boolean check_Password1(String password1) {
+		String pattern = "^(?=.*[A-Z]).{8,}";
+		Pattern r = Pattern.compile(pattern);
+		Matcher m = r.matcher(password1);
+		if (m.find())
+		  	return true;
+		else 
+		    return false;
+	}
 }

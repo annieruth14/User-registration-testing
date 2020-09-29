@@ -87,4 +87,14 @@ public class AppTest
     	boolean result = userRegistration.check_Password("annie");
     	Assert.assertEquals(false, result);
     }
+    @Test
+    public void whenAtleast1UpperCase_shouldReturnTrue() {
+    	boolean result = userRegistration.check_Password1("annieRuth");
+    	Assert.assertEquals(true, result);
+    }
+    @Test
+    public void whenNoUpperCase_shouldReturnFalse() {
+    	boolean result = userRegistration.check_Password1("annieruth");
+    	Assert.assertEquals(false, result);
+    }
 }
