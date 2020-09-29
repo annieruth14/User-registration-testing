@@ -77,4 +77,14 @@ public class AppTest
     	boolean result = userRegistration.check_phoneNumber("91 9875463958");
     	Assert.assertEquals(true, result);
     }
+    @Test
+    public void when8Characters_shouldReturnTrue() {
+    	boolean result = userRegistration.check_Password("annierut");
+    	Assert.assertEquals(true, result);
+    }
+    @Test
+    public void whenLessThan8Characters_shouldReturnTrue() {
+    	boolean result = userRegistration.check_Password("annie");
+    	Assert.assertEquals(false, result);
+    }
 }

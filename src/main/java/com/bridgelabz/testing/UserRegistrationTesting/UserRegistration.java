@@ -51,4 +51,15 @@ public class UserRegistration {
 		else 
 		    return false;
 	}
+
+
+	public boolean check_Password(String password) {
+		String pattern = "^.{8,}$";
+		Pattern r = Pattern.compile(pattern);
+		Matcher m = r.matcher(password);
+		if (m.find())
+		  	return true;
+		else 
+		    return false;
+	}
 }
