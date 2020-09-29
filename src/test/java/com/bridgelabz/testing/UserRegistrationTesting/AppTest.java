@@ -37,4 +37,14 @@ public class AppTest
     	boolean result = userRegistration.check_firstName("An");
     	Assert.assertFalse(result);
     }
+    @Test
+    public void whenStartCapital_shouldReturnTrue1() {
+    	boolean result = userRegistration.check_lastName("Minj");
+    	Assert.assertEquals(true, result);
+    }
+    @Test
+    public void whenStartNotCapital_shouldReturnFalse1() {
+    	boolean result = userRegistration.check_lastName("M");
+    	Assert.assertEquals(false, result);
+    }
 }

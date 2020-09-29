@@ -11,11 +11,22 @@ public class UserRegistration {
 
 	public boolean check_firstName(String value) {
 		String pattern = "^[A-Z][a-z]{2,}$";
-		   Pattern r = Pattern.compile(pattern);
-		   Matcher m = r.matcher(value);
-		   if (m.find())
-			   	return true;
-		   else 
-			   return false;
+		Pattern r = Pattern.compile(pattern);
+		Matcher m = r.matcher(value);
+		if (m.find())
+		 	return true;
+		else 
+		    return false;
+	}
+	
+	
+	public boolean check_lastName(String message) {
+		String pattern = "^[A-Z][a-z]{2,}$";
+		Pattern r = Pattern.compile(pattern);
+		Matcher m = r.matcher(message);
+		if (m.find())
+		  	return true;
+		else 
+		    return false;
 	}
 }
