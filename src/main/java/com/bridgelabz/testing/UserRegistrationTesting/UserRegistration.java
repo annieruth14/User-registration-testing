@@ -40,4 +40,15 @@ public class UserRegistration {
 		else 
 		    return false;
 	}
+
+
+	public boolean check_phoneNumber(String phone) {
+		String pattern = "^[0-9]{1,3}[ ][0-9]{10}?$";
+		Pattern r = Pattern.compile(pattern);
+		Matcher m = r.matcher(phone);
+		if (m.find())
+		  	return true;
+		else 
+		    return false;
+	}
 }

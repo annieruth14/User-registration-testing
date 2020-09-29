@@ -62,4 +62,19 @@ public class AppTest
     	boolean result = userRegistration.check_email("annie..minj@gmail.com");
     	Assert.assertFalse(result);
     }
+    @Test
+    public void whenNoSpace_shouldReturnFalse() {
+    	boolean result = userRegistration.check_phoneNumber("919875463958");
+    	Assert.assertEquals(false, result);
+    }
+    @Test
+    public void whenGreaterThan10_shouldReturnFalse() {
+    	boolean result = userRegistration.check_phoneNumber("91 98754639585");
+    	Assert.assertEquals(false, result);
+    }
+    @Test
+    public void when10Digits_shouldReturnTrue() {
+    	boolean result = userRegistration.check_phoneNumber("91 9875463958");
+    	Assert.assertEquals(true, result);
+    }
 }
