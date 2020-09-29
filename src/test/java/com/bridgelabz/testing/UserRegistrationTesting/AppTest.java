@@ -97,4 +97,14 @@ public class AppTest
     	boolean result = userRegistration.check_Password1("annieruth");
     	Assert.assertEquals(false, result);
     }
+    @Test
+    public void whenNoNumeric_shouldReturnFalse() {
+    	boolean result = userRegistration.check_Password2("annieRuth");
+    	Assert.assertEquals(false, result);
+    }
+    @Test
+    public void whenNumeric_shouldReturnTrue() {
+    	boolean result = userRegistration.check_Password2("annieR3uth");
+    	Assert.assertEquals(true, result);
+    }
 }
