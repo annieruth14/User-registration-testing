@@ -47,4 +47,19 @@ public class AppTest
     	boolean result = userRegistration.check_lastName("M");
     	Assert.assertEquals(false, result);
     }
+    @Test
+    public void givenMessage_whenNoAtTheRate_shouldReturnFalse(){
+    	boolean result = userRegistration.check_email("anniegmail.com");
+    	Assert.assertFalse(result);
+    }
+    @Test
+    public void givenMessage_whenAtTheRate_shouldReturnTrue(){
+    	boolean result = userRegistration.check_email("annie@gmail.com");
+    	Assert.assertTrue(result);
+    }
+    @Test
+    public void givenMessage_whenTwoDots_shouldReturnFalse(){
+    	boolean result = userRegistration.check_email("annie..minj@gmail.com");
+    	Assert.assertFalse(result);
+    }
 }
