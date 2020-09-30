@@ -1,0 +1,92 @@
+-------------------------------------------------------------------------------
+Test set: com.bridgelabz.testing.UserRegistrationTesting.EmailValidationTest
+-------------------------------------------------------------------------------
+Tests run: 22, Failures: 22, Errors: 0, Skipped: 0, Time elapsed: 0.119 s <<< FAILURE! - in com.bridgelabz.testing.UserRegistrationTesting.EmailValidationTest
+testEmail[0](com.bridgelabz.testing.UserRegistrationTesting.EmailValidationTest)  Time elapsed: 0.012 s  <<< FAILURE!
+java.lang.AssertionError: expected: java.lang.String<true> but was: java.lang.Boolean<true>
+	at com.bridgelabz.testing.UserRegistrationTesting.EmailValidationTest.testEmail(EmailValidationTest.java:44)
+
+testEmail[1](com.bridgelabz.testing.UserRegistrationTesting.EmailValidationTest)  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.AssertionError: expected: java.lang.String<true> but was: java.lang.Boolean<true>
+	at com.bridgelabz.testing.UserRegistrationTesting.EmailValidationTest.testEmail(EmailValidationTest.java:44)
+
+testEmail[2](com.bridgelabz.testing.UserRegistrationTesting.EmailValidationTest)  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.AssertionError: expected: java.lang.String<true> but was: java.lang.Boolean<true>
+	at com.bridgelabz.testing.UserRegistrationTesting.EmailValidationTest.testEmail(EmailValidationTest.java:44)
+
+testEmail[3](com.bridgelabz.testing.UserRegistrationTesting.EmailValidationTest)  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.AssertionError: expected: java.lang.String<true> but was: java.lang.Boolean<true>
+	at com.bridgelabz.testing.UserRegistrationTesting.EmailValidationTest.testEmail(EmailValidationTest.java:44)
+
+testEmail[4](com.bridgelabz.testing.UserRegistrationTesting.EmailValidationTest)  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.AssertionError: expected: java.lang.String<true> but was: java.lang.Boolean<true>
+	at com.bridgelabz.testing.UserRegistrationTesting.EmailValidationTest.testEmail(EmailValidationTest.java:44)
+
+testEmail[5](com.bridgelabz.testing.UserRegistrationTesting.EmailValidationTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.AssertionError: expected: java.lang.String<true> but was: java.lang.Boolean<true>
+	at com.bridgelabz.testing.UserRegistrationTesting.EmailValidationTest.testEmail(EmailValidationTest.java:44)
+
+testEmail[6](com.bridgelabz.testing.UserRegistrationTesting.EmailValidationTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.AssertionError: expected: java.lang.String<true> but was: java.lang.Boolean<true>
+	at com.bridgelabz.testing.UserRegistrationTesting.EmailValidationTest.testEmail(EmailValidationTest.java:44)
+
+testEmail[7](com.bridgelabz.testing.UserRegistrationTesting.EmailValidationTest)  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.AssertionError: expected: java.lang.String<false> but was: java.lang.Boolean<false>
+	at com.bridgelabz.testing.UserRegistrationTesting.EmailValidationTest.testEmail(EmailValidationTest.java:44)
+
+testEmail[8](com.bridgelabz.testing.UserRegistrationTesting.EmailValidationTest)  Time elapsed: 0.004 s  <<< FAILURE!
+java.lang.AssertionError: expected: java.lang.String<true> but was: java.lang.Boolean<true>
+	at com.bridgelabz.testing.UserRegistrationTesting.EmailValidationTest.testEmail(EmailValidationTest.java:44)
+
+testEmail[9](com.bridgelabz.testing.UserRegistrationTesting.EmailValidationTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.AssertionError: expected: java.lang.String<false> but was: java.lang.Boolean<false>
+	at com.bridgelabz.testing.UserRegistrationTesting.EmailValidationTest.testEmail(EmailValidationTest.java:44)
+
+testEmail[10](com.bridgelabz.testing.UserRegistrationTesting.EmailValidationTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.AssertionError: expected: java.lang.String<false> but was: java.lang.Boolean<false>
+	at com.bridgelabz.testing.UserRegistrationTesting.EmailValidationTest.testEmail(EmailValidationTest.java:44)
+
+testEmail[11](com.bridgelabz.testing.UserRegistrationTesting.EmailValidationTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.AssertionError: expected: java.lang.String<false> but was: java.lang.Boolean<false>
+	at com.bridgelabz.testing.UserRegistrationTesting.EmailValidationTest.testEmail(EmailValidationTest.java:44)
+
+testEmail[12](com.bridgelabz.testing.UserRegistrationTesting.EmailValidationTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.AssertionError: expected: java.lang.String<false> but was: java.lang.Boolean<false>
+	at com.bridgelabz.testing.UserRegistrationTesting.EmailValidationTest.testEmail(EmailValidationTest.java:44)
+
+testEmail[13](com.bridgelabz.testing.UserRegistrationTesting.EmailValidationTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.AssertionError: expected: java.lang.String<false> but was: java.lang.Boolean<false>
+	at com.bridgelabz.testing.UserRegistrationTesting.EmailValidationTest.testEmail(EmailValidationTest.java:44)
+
+testEmail[14](com.bridgelabz.testing.UserRegistrationTesting.EmailValidationTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.AssertionError: expected: java.lang.String<false> but was: java.lang.Boolean<false>
+	at com.bridgelabz.testing.UserRegistrationTesting.EmailValidationTest.testEmail(EmailValidationTest.java:44)
+
+testEmail[15](com.bridgelabz.testing.UserRegistrationTesting.EmailValidationTest)  Time elapsed: 0.004 s  <<< FAILURE!
+java.lang.AssertionError: expected: java.lang.String<false> but was: java.lang.Boolean<false>
+	at com.bridgelabz.testing.UserRegistrationTesting.EmailValidationTest.testEmail(EmailValidationTest.java:44)
+
+testEmail[16](com.bridgelabz.testing.UserRegistrationTesting.EmailValidationTest)  Time elapsed: 0 s  <<< FAILURE!
+java.lang.AssertionError: expected: java.lang.String<false> but was: java.lang.Boolean<false>
+	at com.bridgelabz.testing.UserRegistrationTesting.EmailValidationTest.testEmail(EmailValidationTest.java:44)
+
+testEmail[17](com.bridgelabz.testing.UserRegistrationTesting.EmailValidationTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.AssertionError: expected: java.lang.String<false> but was: java.lang.Boolean<false>
+	at com.bridgelabz.testing.UserRegistrationTesting.EmailValidationTest.testEmail(EmailValidationTest.java:44)
+
+testEmail[18](com.bridgelabz.testing.UserRegistrationTesting.EmailValidationTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.AssertionError: expected: java.lang.String<false> but was: java.lang.Boolean<false>
+	at com.bridgelabz.testing.UserRegistrationTesting.EmailValidationTest.testEmail(EmailValidationTest.java:44)
+
+testEmail[19](com.bridgelabz.testing.UserRegistrationTesting.EmailValidationTest)  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.AssertionError: expected: java.lang.String<false> but was: java.lang.Boolean<false>
+	at com.bridgelabz.testing.UserRegistrationTesting.EmailValidationTest.testEmail(EmailValidationTest.java:44)
+
+testEmail[20](com.bridgelabz.testing.UserRegistrationTesting.EmailValidationTest)  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.AssertionError: expected: java.lang.String<false> but was: java.lang.Boolean<false>
+	at com.bridgelabz.testing.UserRegistrationTesting.EmailValidationTest.testEmail(EmailValidationTest.java:44)
+
+testEmail[21](com.bridgelabz.testing.UserRegistrationTesting.EmailValidationTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.AssertionError: expected: java.lang.String<false> but was: java.lang.Boolean<false>
+	at com.bridgelabz.testing.UserRegistrationTesting.EmailValidationTest.testEmail(EmailValidationTest.java:44)
+

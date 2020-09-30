@@ -31,14 +31,14 @@ public class UserRegistration {
 	}
 
 
-	public boolean check_email(String message) {
+	public String check_email(String message) {
 		String pattern = "^[A-Za-z0-9]+([_+-.]?[A-Za-z0-9]+)*@[A-Za-z0-9]+.[A-Za-z]{2,4}(.[A-Za-z]{2})?$";
 		Pattern r = Pattern.compile(pattern);
 		Matcher m = r.matcher(message);
 		if (m.find())
-		  	return true;
+		  	return "true";
 		else 
-		    return false;
+		    return "false";
 	}
 
 
