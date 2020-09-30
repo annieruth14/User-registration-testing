@@ -9,89 +9,57 @@ public class UserRegistration {
 	}
 
 
-	public boolean check_firstName(String value) {
+	public boolean check_firstName(String value) throws UserRegException {
 		String pattern = "^[A-Z][a-z]{2,}$";
 		Pattern r = Pattern.compile(pattern);
 		Matcher m = r.matcher(value);
 		if (m.find())
 		 	return true;
 		else 
-		    return false;
+		    throw new UserRegException(UserRegException.ExceptionType.INVALID_NAME, "Name is not valid");
 	}
 	
 	
-	public boolean check_lastName(String message) {
+	public boolean check_lastName(String message) throws UserRegException  {
 		String pattern = "^[A-Z][a-z]{2,}$";
 		Pattern r = Pattern.compile(pattern);
 		Matcher m = r.matcher(message);
 		if (m.find())
 		  	return true;
 		else 
-		    return false;
+			throw new UserRegException(UserRegException.ExceptionType.INVALID_NAME, "Name is not valid");
 	}
 
 
-	public String check_email(String message) {
+	public boolean check_email(String message) throws UserRegException {
 		String pattern = "^[A-Za-z0-9]+([_+-.]?[A-Za-z0-9]+)*@[A-Za-z0-9]+.[A-Za-z]{2,4}(.[A-Za-z]{2})?$";
 		Pattern r = Pattern.compile(pattern);
 		Matcher m = r.matcher(message);
 		if (m.find())
-		  	return "true";
+		  	return true;
 		else 
-		    return "false";
+			throw new UserRegException(UserRegException.ExceptionType.INVALID_EMAIL, "Email id is not valid");
 	}
 
 
-	public boolean check_phoneNumber(String phone) {
+	public boolean check_phoneNumber(String phone) throws UserRegException {
 		String pattern = "^[0-9]{1,3}[ ][0-9]{10}?$";
 		Pattern r = Pattern.compile(pattern);
 		Matcher m = r.matcher(phone);
 		if (m.find())
 		  	return true;
 		else 
-		    return false;
+			throw new UserRegException(UserRegException.ExceptionType.INVALID_PHONE_NO, "Phone number is not valid");
 	}
 
 
-	public boolean check_Password(String password) {
-		String pattern = "^.{8,}$";
+	public boolean check_Password(String password) throws  UserRegException {
+		String pattern = "^(?=.*?[0-9])(?=.*?[A-Z])[0-9a-zA-Z]*[@#$%][0-9a-zA-Z]*${8,}";
 		Pattern r = Pattern.compile(pattern);
 		Matcher m = r.matcher(password);
 		if (m.find())
 		  	return true;
 		else 
-		    return false;
-	}
-
-
-	public boolean check_Password1(String password1) {
-		String pattern = "^(?=.*[A-Z]).{8,}";
-		Pattern r = Pattern.compile(pattern);
-		Matcher m = r.matcher(password1);
-		if (m.find())
-		  	return true;
-		else 
-		    return false;
-	}
-	
-	public boolean check_Password2(String password2) {
-		String pattern = "^(?=.*[0-9])(?=.*[A-Z]).{8,}";
-		Pattern r = Pattern.compile(pattern);
-		Matcher m = r.matcher(password2);
-		if (m.find())
-		  	return true;
-		else 
-		    return false;
-	}
-
-
-	public boolean check_Password3(String password3) {
-		String pattern = "^(?=.*?[0-9])(?=.*?[A-Z])[0-9a-zA-Z]*[@#$%][0-9a-zA-Z]*${8,}";
-		Pattern r = Pattern.compile(pattern);
-		Matcher m = r.matcher(password3);
-		if (m.find())
-		  	return true;
-		else 
-		    return false;
+			throw new UserRegException(UserRegException.ExceptionType.INVALID_PASSWORD, "Phone number is not valid");
 	}
 }

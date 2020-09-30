@@ -4,6 +4,7 @@ import static org.junit.Assert.assertEquals;
 import java.util.Arrays;
 import java.util.Collection;
 
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -26,6 +27,8 @@ public class EmailValidationTest {
 	}
 	@Parameterized.Parameters
 	public static Collection input() {
+		//called implicitly by the compiler
+		//System.out.println("first");
 		return Arrays.asList(new Object[][] { {"abc@yahoo.com", "true"}, 
 			{"abc-100@yahoo.com", "true"},	{"abc.100@yahoo.com", "true"},	{"abc111@abc.com", "true"},
 			{"abc-100@abc.net", "true"},		{"abc.100@abc.com", "true"},		{"abc@1.com", "true"},
@@ -37,9 +40,14 @@ public class EmailValidationTest {
 	}
 	
 	@Test
-	public void testEmail() {
-		System.out.println("Expected result : "+ expectedResult);
-		assertEquals(expectedResult, userReg.check_email(email));
+	public void testEmail() throws UserRegException {
+		boolean result = false;
+		try {
+			result = userReg.check_email(email);
+		}
+		catch (UserRegException e){
+			Assert.assertEquals(UserRegException.ExceptionType.INVALID_EMAIL, e.exceptionType);
+		}
 	}
 	
 }
