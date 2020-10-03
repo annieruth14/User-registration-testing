@@ -28,11 +28,11 @@ public class EmailValidationTest {
 	@Parameterized.Parameters
 	public static Collection input() {
 		//called implicitly by the compiler
-		//System.out.println("first");
+		
 		return Arrays.asList(new Object[][] { {"abc@yahoo.com", "true"}, 
 			{"abc-100@yahoo.com", "true"},	{"abc.100@yahoo.com", "true"},	{"abc111@abc.com", "true"},
 			{"abc-100@abc.net", "true"},		{"abc.100@abc.com", "true"},		{"abc@1.com", "true"},
-			{"abc@gmail.com.com" , "false"},	{"abc+100@gmail.com", "true"},	{"abc", "false"},
+			{"abc@gmail.com.com" , "true"},	{"abc+100@gmail.com", "true"},	{"abc", "false"},
 			{"abc@.com.my", "false"},			{"abc123@gmail.a", "false"},		{"abc123@.com", "false"},
 			{"abc123@.com.com", "false"},		{".abc@abc.com", "false"},		{"abc()*@gmail.com", "false"},
 			{"abc@%*.com", "false"},			{"abc..2002@gmail.com", "false"},	{"abc.@gmail.com", "false"},
@@ -40,12 +40,17 @@ public class EmailValidationTest {
 	}
 	
 	@Test
-	public void testEmail() throws UserRegException {
+	public void testEmail() {
 		boolean result = false;
 		try {
-			result = userReg.check_email(email);
+			result = userReg.check_email.message(email);
+			if(result == true)
+				Assert.assertTrue(result);
+			else 
+				throw new UserRegException(UserRegException.ExceptionType.INVALID_EMAIL, "Email id not valid");
 		}
 		catch (UserRegException e){
+			System.out.println(e.getMessage());
 			Assert.assertEquals(UserRegException.ExceptionType.INVALID_EMAIL, e.exceptionType);
 		}
 	}
